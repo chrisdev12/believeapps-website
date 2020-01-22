@@ -1,0 +1,31 @@
+.technologies{
+  width: 100%;
+  margin-top: 2rem;
+
+  a{
+    display: none;
+  }
+
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    border-bottom: 4px solid #f6f9fc;
+    border-top:  4px solid #f6f9fc;
+    padding: 2rem;
+    cursor: pointer;
+
+
+    li {
+      font-size: 2.5rem;
+      color: #757575;
+      text-align: center;
+      margin: 1rem;
+
+      @media screen and (min-width: 800px) {
+        font-size: 4rem;
+      }
+    }      
+  }
+}
