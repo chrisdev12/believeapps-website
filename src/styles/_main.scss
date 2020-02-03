@@ -17,8 +17,8 @@ main{
   
   // All text boxes of the main section
 
-  .introduction-text{
-    width: 80%;
+  .main-text{
+     width: 80%;
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
@@ -41,14 +41,7 @@ main{
     p{
       color: #757575;;
       font-size: 1.5rem;
-      
-      
-      @media screen and (min-width: 500px) {
-        p{
-          font-size: 4rem;
-        }
       } 
-    }
   }
    
 

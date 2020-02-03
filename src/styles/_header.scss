@@ -11,29 +11,17 @@ nav{
   a{
     text-decoration: none;
     color: whitesmoke;
+    
+    &:hover{
+        border-bottom: 2.5px solid $amarillo-oficial;
+    }
   }
 }  
 
 @media screen and (max-width: 799px) {
   nav{
     flex-wrap:wrap;
-  
-    .navlist{ /*  Hide the navbar items if the hamburguer button is not pressed*/
-      width: 100%;
-      height: 0vh;
-      padding-left: 0;
-      overflow: hidden;
-      list-style: none;
-      transition-delay: 1s;
-      transition: height 1s ease-out;
-      background: $background;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      text-align: left;
-
-    } 
-
+    
     .navicon{
       position: relative;
       cursor: pointer;
@@ -50,13 +38,37 @@ nav{
       
     }
   
+    .navlist{ /*  Hide the navbar items if the hamburguer button is not pressed*/
+      width: 100%;
+      height: 0vh;
+      padding-left: 0;
+      overflow: hidden;
+      list-style: none;
+      transition-delay: 1s;
+      transition: height 1s ease-out;
+      background: $background;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      
+      a{
+          opacity: 0;
+          transition: opacity 0.3s ease-out;
+        }
+    } 
+
     /*BEHAVIOR OF HAMBURGUER MENU : UL display when input be checked */
     #menu{
       display: none;
   
       &:checked ~ *.navlist{
         height: 10rem;
-      } 
+      }
+      
+       &:checked ~ .navlist a {
+        opacity: 1;
+      }
     }
   }
 }   

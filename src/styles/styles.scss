@@ -1,3 +1,4 @@
+
 @import "./_variables.scss";
 @import "./_header.scss";
 @import "./_main.scss";
@@ -5,13 +6,18 @@
 @import "./_technologies.scss";
 @import "./_about-us";
 
+
 *{
   margin: 0;
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
+
 
 body {
   font-family: $font-main;
   color: whitesmoke;
   background: white;
 }
+
