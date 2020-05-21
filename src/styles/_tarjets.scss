@@ -8,6 +8,7 @@
 
 
   div{
+    color: black;
     width: 85%;
     height: 21rem;
     margin-bottom: 1.5rem;
@@ -31,15 +32,8 @@
 
     }
 
-    a{
-      cursor: pointer;
-      width: 40%;
-      text-decoration: none;
-      color: black;
-      
-      h3{
-        margin-bottom: 1.5rem;
-      }
+    h3{
+      margin-bottom: 1.5rem;
     }
   }
 }
