@@ -1,0 +1,31 @@
+.banner{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1{
+    font-size: 7rem;
+    color: whitesmoke;
+    text-shadow: 2px 2px 0 blue, 
+                2px 2px 0 blue, 
+                2px -2px 0 blue, 
+              -2px -2px 0 blue;
+    animation: bounce 1s infinite alternate;
+  }
+  h2{
+    color: black;
+    font-size: 2rem;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-55px);
+  }
+}

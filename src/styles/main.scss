@@ -1,0 +1,130 @@
+// All text boxes of the main section
+@import "./_variables.scss";
+.main-aboutUs{
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  h2{
+    color: #2c5364;
+    font-size: 5rem;
+    font-weight: bolder;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 1px 0 $amarillo-oficial, 
+                 2px 1px 0 $amarillo-oficial, 
+                 2px -1px 0 $amarillo-oficial, 
+                -2px -1px 0 $amarillo-oficial;
+    animation: bounce 1s infinite alternate;
+  }
+
+  p{
+    color: transparent;
+    text-shadow: 2px 1px 0 $amarillo-oficial, 
+                 2px 1px 0 $amarillo-oficial, 
+                 2px -1px 0 $amarillo-oficial, 
+                -2px -1px 0 $amarillo-oficial;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media screen and (max-width: $super-small-screen) {
+    h2{
+      font-size: 3.5rem;
+    }
+    p{
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: $small-screen) {
+    h2{
+      font-size: 4rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+  }
+}
+  
+// .main-trail-text{
+//   padding: 3rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+
+//   p{
+//     color: transparent;
+//     text-shadow: 2px 1px 0 $amarillo-oficial, 
+//                  2px 1px 0 $amarillo-oficial, 
+//                  2px -1px 0 $amarillo-oficial, 
+//                 -2px -1px 0 $amarillo-oficial;
+//     font-size: 3rem;
+//   }
+// }
+
+.cube{ 
+  width: 17rem;
+  height: 17rem;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  transform: rotateY(-26deg);
+  perspective: 800px;
+  grid-area: cube;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  align-self: center;
+
+  .cube-face {
+    width: 150px;
+    height: 150px;
+    position: absolute;     
+    opacity: 0.7;
+    border: 3px solid black;
+  }
+
+  .cube-face-back {
+    transform: translateZ(-50px);
+  }
+  
+  .cube-face-left {
+    transform: translateX(-100px) rotateY(90deg);
+  }
+
+  .cube-face-right {
+    transform: translateX(100px) rotateY(90deg);
+  }
+
+  .cube-face-top {
+    transform: translateY(-100px) rotateX(90deg);
+  }
+
+  .cube-face-bottom {
+    transform: translateY(100px) rotateX(90deg);     
+  }
+
+  .cube-face-front {
+    transform: translateZ(100px);
+  }
+}
+    
+@keyframes slide-in {
+
+  25% {
+    opacity: 1;
+  }
+
+  38% {
+    opacity: 0;
+  }  
+
+} 
+
+@keyframes cube-rotation {
+ 
+  100% { transform: rotateY(360deg)};
+}
+/*
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2017/07/15/19/42/manipulation-smartphone-2507499_960_720.jpg");*/

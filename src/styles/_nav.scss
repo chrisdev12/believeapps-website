@@ -1,0 +1,98 @@
+nav{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  padding: 1rem;
+  z-index: 1;
+  justify-content: space-between;
+  top: 0;
+
+  a{
+    text-decoration: none;
+    color: whitesmoke;
+    
+    &:hover{
+        border-bottom: 2.5px solid $amarillo-oficial;
+    }
+  }
+}  
+
+@media screen and (max-width: 799px) {
+  nav{
+    flex-wrap:wrap;
+    
+    .navicon{
+      position: relative;
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+  
+      span{
+        width: 1.7rem;
+        height: 0.2rem;
+        background-color: transparent;
+        display: block;
+        margin-bottom: 0.1rem;
+      }
+      
+    }
+  
+    .navlist{ /*  Hide the navbar items if the hamburguer button is not pressed*/
+      width: 100%;
+      height: 0vh;
+      padding-left: 0;
+      overflow: hidden;
+      list-style: none;
+      transition-delay: 1s;
+      transition: height 1s ease-out;
+      background: $background;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      
+      a{
+          opacity: 0;
+          transition: opacity 0.3s ease-out;
+        }
+    } 
+
+    /*BEHAVIOR OF HAMBURGUER MENU : UL display when input be checked */
+    #menu{
+      display: none;
+  
+      &:checked ~ *.navlist{
+        height: 10rem;
+      }
+      
+       &:checked ~ .navlist a {
+        opacity: 1;
+      }
+    }
+  }
+}  
+
+@media screen and (min-width: 800px) {
+
+  nav{
+    height: 3rem;
+    flex-direction: row;
+
+    .navicon, #menu{
+      display:none;
+    }
+
+    .navlist{
+      width: 50%;
+      height: 0vh;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+
+      li{
+        margin-right: 2rem;
+        text-decoration: none;
+      }
+    }
+  }
+}

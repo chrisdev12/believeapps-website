@@ -1,0 +1,151 @@
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.main-aboutUs {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-aboutUs h2 {
+  color: #2c5364;
+  font-size: 5rem;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 0 #e3b04b, 1px 1px 0 #e3b04b, 1px -1px 0 #e3b04b, -1px -1px 0 #e3b04b;
+  -webkit-animation: bounce 1s infinite alternate;
+          animation: bounce 1s infinite alternate;
+}
+
+.main-aboutUs p {
+  color: transparent;
+  text-shadow: 1px 1px 0 #e3b04b, 1px 1px 0 #e3b04b, 1px -1px 0 #e3b04b, -1px -1px 0 #e3b04b;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 550px) {
+  .main-aboutUs h2 {
+    font-size: 3.5rem;
+  }
+  .main-aboutUs p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main-aboutUs h2 {
+    font-size: 4rem;
+  }
+  .main-aboutUs p {
+    font-size: 1.5rem;
+  }
+}
+
+.cube {
+  width: 17rem;
+  height: 17rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  -webkit-transform: rotateY(-26deg);
+          transform: rotateY(-26deg);
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  grid-area: cube;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.cube .cube-face {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  opacity: 0.7;
+  border: 3px solid black;
+}
+
+.cube .cube-face-back {
+  -webkit-transform: translateZ(-50px);
+          transform: translateZ(-50px);
+}
+
+.cube .cube-face-left {
+  -webkit-transform: translateX(-100px) rotateY(90deg);
+          transform: translateX(-100px) rotateY(90deg);
+}
+
+.cube .cube-face-right {
+  -webkit-transform: translateX(100px) rotateY(90deg);
+          transform: translateX(100px) rotateY(90deg);
+}
+
+.cube .cube-face-top {
+  -webkit-transform: translateY(-100px) rotateX(90deg);
+          transform: translateY(-100px) rotateX(90deg);
+}
+
+.cube .cube-face-bottom {
+  -webkit-transform: translateY(100px) rotateX(90deg);
+          transform: translateY(100px) rotateX(90deg);
+}
+
+.cube .cube-face-front {
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px);
+}
+
+@-webkit-keyframes slide-in {
+  25% {
+    opacity: 1;
+  }
+  38% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  25% {
+    opacity: 1;
+  }
+  38% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cube-rotation {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes cube-rotation {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+/*
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2017/07/15/19/42/manipulation-smartphone-2507499_960_720.jpg");*/
+/*# sourceMappingURL=main.css.map */
